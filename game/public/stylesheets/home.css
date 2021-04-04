@@ -1,0 +1,65 @@
+       
+        header {
+          top:0;
+          text-align: center;
+          display: fixed;
+          border-color:lightsteelblue;
+          border-style: outset;
+          font-family: 'Akronim';
+          font-size: 22px;       
+         }
+         
+        body{
+            background-color: bisque;
+        }
+        body div{
+           width: inherit; 
+           height: inherit;
+           display: flex;
+           justify-content: center;
+           
+        }
+        #divform{
+            margin-top: 100px;
+            text-align: center;
+            font-size: larger;
+            display: flex;
+            width: inherit; 
+            height: inherit;
+            justify-content: space-between;
+            flex-direction: column;
+            margin-bottom: 200px;
+
+
+        }
+        #input2{
+            width: 50px;
+        }
+        #input1{
+            width: 80px;
+        }
+        #scoreboard{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        #scoreboard .SR{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .SC{
+            width: 100px;
+            border: 2px solid black;        
+
+        }
+        footer{
+            bottom:0;
+            display: fixed;
+            border-color:lightsteelblue;
+            border-style: outset;
+            font-family: 'Akronim';
+            font-size: 17px;     
+            text-align: center;  
+        }

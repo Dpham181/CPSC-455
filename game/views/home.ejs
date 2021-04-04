@@ -1,0 +1,74 @@
+<html>
+<title>Welcome to Rock Paper Scissors </title>
+<head>
+    <link rel="stylesheet" href="/stylesheets/home.css">
+
+</head>
+
+<body>
+<header>
+    <div>
+        <h1>Welcome to Rock Paper Scissors </h1>
+
+    </div>
+
+</header>
+<div >
+       
+        <form action="/round" method="POST"> 
+            <div id = "divform">
+            <div>
+                <label >Please Choose Your InGame Name?</label>
+                <input id ="input1" type="text"  name="username"  required >
+            </div>
+            <div>
+         
+            <label >How many games would you like to Play?</label>
+            <input id ="input2" type="number" min= "1" name="game"  required ><br> 
+            </div>
+            <div>         
+            <button  type="submit" value="Submit"> Lets Play </button>
+            </div> 
+
+            <div id="scoreboard">
+                     <div><h1>Score Board</h1></div>
+
+                    <div class="SR">
+                        <div class="SC"> Player</div>
+                        <div class="SC"> WINS </div>
+                        <div class="SC"> LOSSES</div>
+                        <div class="SC"> DRAW</div>
+
+                    </div>
+
+                   <% if(Players) {
+                       
+                    for (let i = 0 ; i < Players.length; i++){
+                        
+
+                    %>
+                    <div class="SR">
+
+                    <div class="SC"> <%= Players[i].PlayerName%></div>
+                    <div class="SC"> <%= Players[i].wins%></div>
+                    <div class="SC"> <%= Players[i].losses%></div>
+                    <div class="SC"> <%= Players[i].Draw%></div>
+
+                    </div>
+
+                    <%}%> 
+                    <%}%>
+            </div>
+        </div>
+        </form> 
+       
+</div>
+
+<footer>
+       <p>Author: Danh Pham</p>
+       <p>CPSC 455 WEB SECURITY </p>
+       <p>CSUF</p>
+
+</footer>
+</body>
+</html>

@@ -1,0 +1,4 @@
+{"PlayerName":"danh","TotalGame":1,"wins":0,"losses":0,"Playerchoice":"PAPER","Severchoice":"PAPER","Draw":1}
+{"PlayerName":"danh2","TotalGame":3,"wins":2,"losses":1,"Playerchoice":"ROCK","Severchoice":"Scissors","Draw":0}
+{"PlayerName":"D","TotalGame":1,"wins":0,"losses":1,"Playerchoice":"PAPER","Severchoice":"Scissors","Draw":0}
+{"PlayerName":"dadasd","TotalGame":3,"wins":1,"losses":1,"Playerchoice":"ROCK","Severchoice":"Scissors","Draw":1}

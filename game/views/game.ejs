@@ -1,0 +1,90 @@
+<html>
+<title> Game page </title>
+<head>
+  <link rel="stylesheet" href="/stylesheets/game.css">
+</head>
+<body >
+  <header>   <h1> Please make your move !</h1>  
+</header>
+<div id="PLaying">
+  <div>
+    
+  <div>Player Choose</div>
+  <div><%=player.Playerchoice%></div>
+
+  </div>
+  <div>
+    
+    <div>VS</div>
+    
+    </div>
+
+
+  <div>
+    
+    <div>Sever Choose</div>
+    <div><%=player.Severchoice%></div>
+  
+    </div>
+
+</div>
+  <div>
+   <div id="divform">
+  <form action="/play" method="post">    
+         <div >
+         <input type="radio" id="ROCK" name="move" value="0">
+        <i class="fas fa-hand-rock"></i><br>
+        <input type="radio" id="female" name="move" value="1">
+        <i class="fas fa-hand-paper"></i><br>
+        <input type="radio" id="other" name="move" value="2">
+        <i class="fas fa-hand-scissors"></i><br>
+        </div>
+        <div >
+        <button type="submit" > Play Now </button>
+        </div>
+  </form>
+ </div>
+  </div>
+  <%  
+   if(Number(player.TotalGame) === Number(player.wins+player.losses + player.Draw)) {%>
+  
+ <div id="myModal" class="modal" >  
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="flex">
+      <% if (Number(player.wins)>Number(player.losses) ) { %>
+         <div>  <i class="fas fa-smile"></i>
+         </div>
+        <div>
+          <h1>Congratulation <%=player.PlayerName%> You are The Winner !!! </h1>
+        </div>
+
+        <%} else {%>   
+          <div><i class="fas fa-grimace"></i></div>
+
+          <div>
+            <h1>Sorry  <%=player.PlayerName%> You are not The Winner !!! </h1>
+          </div>
+          <% }%> 
+      
+
+
+       <div class="f1"><h2>Here is Your Result of <%= player.TotalGame %> games</h1></div>
+       <div class="f2"><h2>Player wins: <%= player.wins %> </h2></div>
+       <div class="f3"><h2>Sever wins: <%= player.losses %></h2> </div>
+       <% delete player; %>
+       <div class="f4"><a class="button" href="/">PLay Again! </a> </div>
+    </div>
+  </div>
+
+</div>
+  <%}%>
+
+</body>
+<script type="text/javascript" src="/javascripts/modal.js"> </script>
+
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</html>
